@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "Dialog", menuName = "Dialog/Talking", order = 0)]
+
 public class DialogExample : MonoBehaviour
 {
     public Text text;
