@@ -5,39 +5,39 @@ public enum QuestType
 {
     normal,daily,weekly
 }
-//ÀÏ¹İ Äù½ºÆ® : Å¬¸®¾î ÇÏ¸é ´õÀÌ»ó ±ı¼ö ¾ø½À´Ï´Ù.
-//µ¥ÀÏ¸® Äù½ºÆ® : ¸ÅÀÏÀ» ±âÁØÀ¸·Î Äù½ºÆ®°¡ °»½ÅµË´Ï´Ù.
-//À§Å¬¸® Äù½ºÆ® : ÁÖ¸¦ ±âÁØÀ¸·Î Äù½ºÆ®°¡ °»½ÅµË´Ï´Ù.
+//ì¼ë°˜ í€˜ìŠ¤íŠ¸ : í´ë¦¬ì–´ í•˜ë©´ ë”ì´ìƒ ê¹°ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+//ë°ì¼ë¦¬ í€˜ìŠ¤íŠ¸ : ë§¤ì¼ì„ ê¸°ì¤€ìœ¼ë¡œ í€˜ìŠ¤íŠ¸ê°€ ê°±ì‹ ë©ë‹ˆë‹¤.
+//ìœ„í´ë¦¬ í€˜ìŠ¤íŠ¸ : ì£¼ë¥¼ ê¸°ì¤€ìœ¼ë¡œ í€˜ìŠ¤íŠ¸ê°€ ê°±ì‹ ë©ë‹ˆë‹¤.
 
 [CreateAssetMenu(fileName = "Quest", menuName = "Quest/quest", order = 0)]
 public class Quest : ScriptableObject
 {
-    public QuestType Äù½ºÆ®À¯Çü;
-    public Reward º¸»ó;
-    public Requirement ¿ä±¸Á¶°Ç;
+    public QuestType í€˜ìŠ¤íŠ¸ìœ í˜•;
+    public Reward ë³´ìƒ;
+    public Requirement ìš”êµ¬ì¡°ê±´;
 
-    [Header("Äù½ºÆ® Á¤º¸")]
-    public string Á¦¸ñ; //Äù½ºÆ®ÀÇ Á¦¸ñ
-    public string ¸ñÇ¥; //Äù½ºÆ®ÀÇ ¸ñÇ¥
-    [TextArea]public string ¼³¸í; //Äù½ºÆ®¿¡ ´ëÇÑ ¼³¸í
+    [Header("í€˜ìŠ¤íŠ¸ ì •ë³´")]
+    public string ì œëª©; //í€˜ìŠ¤íŠ¸ì˜ ì œëª©
+    public string ëª©í‘œ; //í€˜ìŠ¤íŠ¸ì˜ ëª©í‘œ
+    [TextArea]public string ì„¤ëª…; //í€˜ìŠ¤íŠ¸ì— ëŒ€í•œ ì„¤ëª…
 
-    public bool ¼º°ø; //Äù½ºÆ®ÀÇ ¼º°ø ¿©ºÎ¸¦ Ã¼Å©ÇÕ´Ï´Ù.
-    public bool ÁøÇà»óÅÂ; //Äù½ºÆ®°¡ ÁøÇà ÁßÀÎÁö¸¦ È®ÀÎ ÇÏ´Â ¿ëµµ·Î »ç¿ë.
+    public bool ì„±ê³µ; //í€˜ìŠ¤íŠ¸ì˜ ì„±ê³µ ì—¬ë¶€ë¥¼ ì²´í¬í•©ë‹ˆë‹¤.
+    public bool ì§„í–‰ìƒíƒœ; //í€˜ìŠ¤íŠ¸ê°€ ì§„í–‰ ì¤‘ì¸ì§€ë¥¼ í™•ì¸ í•˜ëŠ” ìš©ë„ë¡œ ì‚¬ìš©.
 }
 
-//¿ä±¸ Á¶°Ç¿¡ ´ëÇÑ ½ºÅ©¸³ÅÍºí ¿ÀºêÁ§Æ® »ı¼º
+//ìš”êµ¬ ì¡°ê±´ì— ëŒ€í•œ ìŠ¤í¬ë¦½í„°ë¸” ì˜¤ë¸Œì íŠ¸ ìƒì„±
 [Serializable]
 [CreateAssetMenu(fileName = "Requirement", menuName = "Quest/Requirement", order = 1)]
 public class Requirement : ScriptableObject
 {
-    public int ¸ñÇ¥¸ó½ºÅÍ¼ö;
-    public int ÇöÀçÀâÀº¸ó½ºÅÍ¼ö;
+    public int ëª©í‘œëª¬ìŠ¤í„°ìˆ˜;
+    public int í˜„ì¬ì¡ì€ëª¬ìŠ¤í„°ìˆ˜;
 }
 
 [Serializable]
 [CreateAssetMenu(fileName = "Reward", menuName = "Quest/Reward", order = 2)]
 public class Reward : ScriptableObject
 {
-    public int µ·;
-    public float °æÇèÄ¡;
+    public int ëˆ;
+    public float ê²½í—˜ì¹˜;
 }
